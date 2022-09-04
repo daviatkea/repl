@@ -19,8 +19,8 @@
     <pre><code
         >.parent {"{"}
   display: grid;
-  <span class="output">grid-template-columns:{" 1fr".repeat(valcol)}</span>
-  <span class="output">gap: {valgap}px</span>
+  <span class="output">grid-template-columns:{" 1fr".repeat(valcol)};</span>
+  <span class="output">gap: {valgap}px;</span>
 {"}"}</code
       ></pre>
     <div class="control">
