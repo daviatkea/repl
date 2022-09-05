@@ -190,14 +190,14 @@
     font-variant: tabular-nums;
   }
   input {
-    width: min-content;
+    width: 2ch;
     color: inherit;
     font: inherit;
     background: inherit;
     border: none;
   }
 
-  input + span {
+  pre input + span {
     margin-left: -0.4rem;
   }
 
@@ -206,5 +206,8 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 </style>
