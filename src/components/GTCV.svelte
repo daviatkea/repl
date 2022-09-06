@@ -3,7 +3,7 @@
 
   export let boxCount = "3";
   let valcol = 1;
-  let maxcol = 3;
+  let maxcol = 4;
   let stepcol = 1;
   let valgap = 0;
   let maxgap = 20;
