@@ -31,7 +31,7 @@
 <section>
   <div class="code-section">
     <pre><code
-        >.parent {"{"}
+        >.grid_{columnString.replaceAll("fr", "").replaceAll(" ", "-")} {"{"}
   display: grid;
   <span class="inline" bind:this={node}
           >grid-template-columns: <span class="output"
@@ -78,7 +78,10 @@
     </div>
   </div>
   <div class="wrapper" style="--cols: {columnString}; --gap: {valgap}px;">
-    <div class="parent">
+    <div
+      class="parent"
+      data-url={columnString.replaceAll("fr", "").replaceAll(" ", "-")}
+    >
       {#each { length: boxCount } as _, i}
         <span class="child-{i + 1}">.child-{i + 1}</span>
       {/each}
@@ -141,6 +144,7 @@
 
   .wrapper > div::before {
     content: ".parent";
+    content: ".grid_" attr(data-url);
     position: absolute;
     background: #fff;
     padding-inline: 0.25em;
