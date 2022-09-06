@@ -48,15 +48,19 @@
       ></pre>
     <div class="control">
       <label for="b">Columns</label>
-      <input
-        id="b"
-        type="range"
-        bind:value={valcol}
-        on:input={doStuff}
-        step={stepcol}
-        max={maxcol}
-        min="1"
-      />
+      <div class="inline">
+        <span>1</span>
+        <input
+          id="b"
+          type="range"
+          bind:value={valcol}
+          on:input={doStuff}
+          step={stepcol}
+          max={maxcol}
+          min="1"
+        />
+        <span>{maxcol}</span>
+      </div>
     </div>
     <div class="control">
       <label for="a">Gap</label>
